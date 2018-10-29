@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+
+<h1>Remove Cheese</h1>
+
+<form method="post">
+   
+    <input name="name" type="text" />
+    <input type="submit" value="Remove Cheese(s)" />
+    
+    @foreach (KeyValuePair<string, string> cheese in ViewBag.cheeses)
+    {
+        <option value="@cheese.Key" />
+    }
+</form>
